@@ -1,1 +1,37 @@
-<p>This is the question view.</p>
+<div>
+	<h2>{{question.question}}</h2>
+	<timer countdown="8" interval="1000" finish-callback="timeOut()">
+	<div class="progress">
+	  <div class="progress-bar" role="progressbar" aria-valuenow="{{progressBar}}"
+	  aria-valuemin="0" aria-valuemax="100" style="width:{{progressBar}}%"></div>
+	  </div>
+	</timer>
+	<div class="row">
+		<button class="btn btn-default btn-lg col-md-12 col-sm-12 col-xs-6" ng-repeat="option in question.options" ng-click="validateAnswer({{$index}})">{{option}}</button>
+	</div>
+</div>
+
+
+<div class="response-answer success" ng-show="successAnswer" class="row">
+	<p class="text-center">
+		<h1>Bravo!</h1>
+		<p>Go to {{question.name}}</p>
+		<a class="btn btn-success btn-lg col-md-12 col-sm-12 col-xs-12" ng-href="#/city/{{question.id}}">Laisse-toi tenter !</a>
+	</p>
+</div>
+
+<div class="response-answer fail" ng-show="failAnswer" class="row">
+	<p class="text-center">
+		<h1>Fail</h1>
+		<p>You will never go to {{question.name}}</p>
+		<a class="btn btn-default btn-lg col-md-12 col-sm-12 col-xs-12" ng-href="#/cities">I will give it another try!</a>
+	</p>
+</div>
+
+<div class="response-answer time" ng-show="timeAnswer">
+	<p class="text-center">
+		<h1>TimeOut</h1>
+		<p>You will never go to {{question.name}}</p>
+		<a class="btn btn-default btn-lg col-md-12 col-sm-12 col-xs-12" ng-href="#/cities">>I will give it another try!</a>
+	</p>
+</div>
