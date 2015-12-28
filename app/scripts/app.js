@@ -15,7 +15,7 @@ angular
   ])
   .constant('config', {
       appName: 'Trivia.travel',
-      apiUrl: 'http://localhost:8888/trivia.travel/app'
+      apiUrl: 'http://localhost:8888/trivia.travel/app/'
   })
   .config(function ($routeProvider) {
     $routeProvider

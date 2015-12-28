@@ -8,10 +8,8 @@
  * Controller of the triviatravelApp
  */
 angular.module('triviatravelApp')
-  .controller('AdminCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('AdminCtrl', ['$scope', 'cityFactory', function ($scope, cityFactory) {
+  	$scope.resetAll = function() {
+  		cityFactory.resetStatutAll();
+  	};
+}]);
