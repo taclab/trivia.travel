@@ -8,10 +8,16 @@
  * Controller of the triviatravelApp
  */
 angular.module('triviatravelApp')
-  .controller('CitiesCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('CitiesCtrl', ['$scope', 'cityFactory', function ($scope, cityFactory) {
+
+  	cityFactory.get().success(function(response){
+        var allCities = response;
+        $scope.allCities = allCities;
+    });
+
+	$scope.loopNumber = function(num) {
+    	return new Array(num);   
+	};
+    //cityFactory.save($scope.allCities)
+
+}]);
