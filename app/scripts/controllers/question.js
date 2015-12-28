@@ -17,7 +17,7 @@ angular.module('triviatravelApp')
 
   	// GET ALL QUESTION
   	cityFactory.getQuestions().success(function(response){
-        $scope.question = $filter('filter')(response, function (d) { if (d.id === $scope.idCity) return d;})[0];
+        $scope.question = $filter('filter')(response, function (d) { if (d.id === $scope.idCity){return d;}})[0];
     });
 
   	// Validate 
