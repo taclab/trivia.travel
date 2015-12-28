@@ -26,10 +26,12 @@ angular.module('triviatravelApp')
         $scope.$broadcast('timer-stop');
   			$scope.successAnswer = true;
   			cityFactory.changeStatut($scope.idCity, 'success');
+        $scope.$apply();
   		} else {
         $scope.$broadcast('timer-stop');
   			$scope.failAnswer = true;
   			cityFactory.changeStatut($scope.idCity, 'fail');
+        $scope.$apply();
   		}
   	};
 
