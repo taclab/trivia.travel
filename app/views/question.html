@@ -1,13 +1,13 @@
 <div>
 	<h2>{{question.question}}</h2>
-	<timer countdown="8" interval="1000" finish-callback="timeOut()">
+	<timer countdown="10" interval="1000" finish-callback="timeOut()">
 	<div class="progress">
 	  <div class="progress-bar" role="progressbar" aria-valuenow="{{progressBar}}"
 	  aria-valuemin="0" aria-valuemax="100" style="width:{{progressBar}}%"></div>
 	  </div>
 	</timer>
 	<div class="row">
-		<button class="btn btn-default btn-lg col-md-12 col-sm-12 col-xs-6" ng-repeat="option in question.options" ng-click="validateAnswer({{$index}})">{{option}}</button>
+		<button class="btn btn-default btn-lg col-md-12 col-sm-12 col-xs-6" ng-repeat="option in question.options" ng-click="validateAnswer($index)">{{option}}</button>
 	</div>
 </div>
 

@@ -13,11 +13,11 @@ angular.module('triviatravelApp')
 
 
     // GET ID CITY
-  	$scope.idVille = $routeParams.villeID;
+  	$scope.idCity = $routeParams.cityID;
 
   	// GET ALL QUESTION
   	cityFactory.getQuestions().success(function(response){
-        $scope.question = $filter('filter')(response, function (d) { if (d.id === $scope.idVille) { return d;}})[0];
+        $scope.question = $filter('filter')(response, function (d) { if (d.id === $scope.idCity) return d;})[0];
     });
 
   	// Validate 
@@ -25,17 +25,17 @@ angular.module('triviatravelApp')
   		if(ans === $scope.question.answer) {
         $scope.$broadcast('timer-stop');
   			$scope.successAnswer = true;
-  			cityFactory.changeStatut($scope.idVille, 'success');
+  			cityFactory.changeStatut($scope.idCity, 'success');
   		} else {
         $scope.$broadcast('timer-stop');
   			$scope.failAnswer = true;
-  			cityFactory.changeStatut($scope.idVille, 'fail');
+  			cityFactory.changeStatut($scope.idCity, 'fail');
   		}
   	};
 
   	// TIME OUT
   	$scope.timeOut = function () {
-  		cityFactory.changeStatut($scope.idVille, 'fail');
+  		cityFactory.changeStatut($scope.idCity, 'fail');
   		$scope.timeAnswer = true;
   		$scope.$apply();
   	};

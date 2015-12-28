@@ -10,7 +10,8 @@
  */
 angular
   .module('triviatravelApp', [
-    'ngRoute'
+    'ngRoute',
+    'timer'
   ])
   .constant('config', {
       appName: 'Trivia.travel',
