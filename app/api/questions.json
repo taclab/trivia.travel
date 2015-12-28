@@ -1,0 +1,34 @@
+[{
+    "id" : "001",
+    "name" : "Tanger",
+    "question": "Quel titan vaincu par Hercule fut enterré à Tanger ?",
+    "options": ["Crios", "Cronos", "Antée", "Hypérion"],
+    "answer": 2
+}, {
+    "id" : "002",
+    "name" : "Istambul",
+    "question": "La ville d'Istambul était connue sous le nom de ",
+    "options": ["Persepolis", "Constantinople", "Byzantium", "Babylone"],
+    "answer": 2
+}, {
+    "id" : "003",
+    "name" : "Londres",
+    "question": "Jusqu’en 1916 chez Harrod's on pouvait trouver…",
+    "options": ["De l’or pur", "Du petrol brut", "De la cocaine pure", "De l'héroine"],
+    "answer": 2
+},{
+    "id" : "004",
+    "name" : "Zagreb",
+    "question": "Quel pays n'a pas de frontière terrestre avec la Croatie ?",
+    "options": ["Hongrie", "Italie", "Slovénie", "Bosnie"],
+    "answer": 1
+},{
+    "id" : "005",
+    "name" : "Ljubljana",
+    "question": "En quelle année la Slovénie est elle entrée dans l'Union Européenne ?",
+    "options": ["2002", "2004", "2006", "2008"],
+    "answer": 1
+}
+]
+
+
