@@ -1,1 +1,11 @@
-<p>This is the city view.</p>
+<div class="col-md-8 col-md-offset-3">
+	<div ng-repeat="city in allCities | filter:{'id':  idVille}:true" class="cities">
+		<img src="images/{{city.imgSuccess}}" class="img-responsive" alt="{{city.quote}}">
+		<div class="legend">
+			<h3>{{city.name}}</h3>
+			<span>{{city.quote}}</span>
+		</div>
+	</div>
+	<button type="button" class="btn btn-success btn-lg col-sm-12 col-md-12 col-lg-10 col-xs-12" ng-click="travel()">Go!</button>
+	<a type="button" class="btn btn-default btn-lg col-sm-12 col-lg-10 col-xs-12" ng-href="#/cities">Nope! Another city !</a>
+</div>
